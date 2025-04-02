@@ -1,8 +1,8 @@
-# Finance-APP
+# UFinance
 
 ## Overview
 
-**Finance-APP** is a simple yet efficient finance management application designed to help users track their income and expenses. This application uses **CRUD** (Create, Read, Update, Delete) as its core architecture, providing an intuitive and easy-to-use interface for managing personal finances. The app also supports **user authentication**, including secure login and registration with cryptography, ensuring that each user's data is protected and unique.
+**UFinance** is a simple yet efficient finance management application designed to help users track their income and expenses. This application uses **CRUD** (Create, Read, Update, Delete) as its core architecture, providing an intuitive and easy-to-use interface for managing personal finances. The app also supports **user authentication**, including secure login and registration with cryptography, ensuring that each user's data is protected and unique.
 
 ## Features
 
