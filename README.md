@@ -103,5 +103,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 For more information or inquiries, feel free to reach out to the project owner:
 
 Name: João Zanelato
-Email: your-email@example.com
+Email: jgbzanelato@gmail.com
 GitHub: [JoaoZanelato](https://github.com/JoaoZanelato)
