@@ -1,107 +1,44 @@
-# UFinance
+# Finance App 
 
-## Overview
+> Um aplicativo desktop de gestão financeira pessoal focado em organização de despesas, categorização e geração de relatórios.
 
-**UFinance** is a simple yet efficient finance management application designed to help users track their income and expenses. This application uses **CRUD** (Create, Read, Update, Delete) as its core architecture, providing an intuitive and easy-to-use interface for managing personal finances. The app also supports **user authentication**, including secure login and registration with cryptography, ensuring that each user's data is protected and unique.
+## Contexto Acadêmico: Aplicação do 2º Semestre
 
-## Features
+Este projeto foi desenvolvido como trabalho prático do **segundo semestre** do curso de Análise e Desenvolvimento de Sistemas. O objetivo principal foi consolidar os fundamentos teóricos de programação e modelagem, transformando-os em uma aplicação funcional.
 
--   **User Authentication**:
-    -   Secure **user registration** and **login** with encrypted passwords.
-    -   Each user’s data is **isolated** and unique, providing privacy and security.
--   **Financial Data Management**:
-    -   Users can add **receipts** and **expenses**, with real-time updates to their financial data.
-    -   The application automatically calculates a dynamic **balance** whenever new entries are made.
--   **Data Visualization**:
-    -   All financial data is displayed in a clear **table** format.
-    -   **Filters** are available to sort and view specific entries based on various criteria (such as date or amount).
--   **Database**:
-    -   The application uses **SQLite** to store and manage user data.
--   **Security**:
-    -   Passwords are encrypted using Java's **cryptographic libraries** to ensure user data is stored securely.
-    -   User-specific data ensures no sharing between accounts.
+Durante a construção deste sistema, os seguintes conhecimentos foram aplicados na prática:
 
-## Installation
+* **Programação Orientada a Objetos (POO):** Estruturação do código utilizando classes, objetos e encapsulamento em Java.
+* **Padrão de Arquitetura DAO:** Implementação do padrão *Data Access Object* (DAO) para separar claramente a lógica de interface (`src/ui`) da lógica de acesso ao banco de dados (`src/dao`), resultando em um código mais limpo e manutenível.
+* **Integração com Banco de Dados (JDBC):** Conexão da aplicação Java com um banco de dados relacional (SQLite) para garantir a persistência de usuários, categorias e transações.
+* **Interfaces Gráficas (GUI):** Desenvolvimento de janelas e formulários interativos utilizando Java Swing.
+* **Consumo de Bibliotecas Externas:** Integração de bibliotecas de terceiros (.jar) para resolver problemas específicos, como o `JCalendar` para seleção de datas e o `iTextPDF` para a geração de relatórios exportáveis.
 
-### Prerequisites
+## Funcionalidades
 
--   **Java 8 or higher**: Ensure you have a JDK installed on your machine.
--   **SQLite**: For storing user data.
+* **Autenticação de Usuários:** Sistema de login e criação de novas contas (`LoginUserDAO`, `CriarUserDAO`).
+* **Gestão de Despesas:** Registro e listagem de compras e gastos (`CompraDAO`).
+* **Categorização:** Criação e gerenciamento de categorias para classificar as despesas (`CategoriaDAO`).
+* **Relatórios:** Geração de relatórios em PDF para acompanhamento financeiro.
+* **Interface Intuitiva:** Painéis organizados (Cards) e filtros de busca por data.
 
-### Setup
+## Tecnologias Utilizadas
 
-1.  **Clone the repository**:
+* **Linguagem:** Java
+* **Interface:** Java Swing (AWT)
+* **Banco de Dados:** SQLite (via `sqlite-jdbc`)
+* **Bibliotecas Adicionais:**
+  * `JCalendar` (Componentes de calendário para a interface)
+  * `iTextPDF` (Geração de documentos PDF)
 
-    ```
-    git clone [https://github.com/JoaoZanelato/Finance-APP.git](https://github.com/JoaoZanelato/Finance-APP.git)
-    ```
+## Como Executar o Projeto
 
-2.  Navigate to the project directory:
+### Pré-requisitos
+* Java Development Kit (JDK) instalado (versão 8 ou superior).
+* Uma IDE de sua preferência (IntelliJ IDEA, Eclipse, NetBeans) ou configurar o classpath manualmente.
 
-    ```
-    cd Finance-APP
-    ```
+### Passos
 
-3.  Build the project:
-
-    If you're using Maven, you can compile the project with:
-
-    ```
-    mvn clean install
-    ```
-
-    Alternatively, if you're using Gradle, run:
-
-    ```
-    gradle build
-    ```
-
-4.  Run the application:
-
-    After building the project, you can run the application by executing:
-
-    ```
-    java -jar target/finance-app.jar
-    ```
-
-## Usage
-
-### User Registration and Login
-
-Upon starting the application, you'll be prompted to register or login. Provide a username and password. The password will be encrypted before storing it in the database. Once logged in, you can start managing your finances.
-
-### Add Receipts and Expenses
-
-After logging in, navigate to the section where you can add receipts and expenses. Enter the details of the transaction, such as the amount and category. The balance will update automatically with each new entry.
-
-### Filters and Data Display
-
-Your financial entries will be shown in a table format. You can use available filters to sort data by date, amount, or category. You can also update or delete entries as needed.
-
-## Technologies Used
-
--   Java 8 (or higher): Main programming language for the application.
--   SQLite: Database for storing user data.
--   Java Cryptography API: Secure password encryption for authentication.
-
-## Contributing
-
-We encourage open-source contributions to improve the project! If you would like to contribute, follow these steps:
-
-1.  Fork the repository.
-2.  Create a new branch (`git checkout -b feature/your-feature-name`).
-3.  Commit your changes (`git commit -m 'Add new feature'`).
-4.  Push to your branch (`git push origin feature/your-feature-name`).
-5.  Create a Pull Request.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Contact
-
-For more information or inquiries, feel free to reach out to the project owner:
-
-Name: João Zanelato
-Email: jgbzanelato@gmail.com
-GitHub: [JoaoZanelato](https://github.com/JoaoZanelato)
+1. Clone este repositório:
+   ```bash
+   git clone [https://github.com/JoaoZanelato/finance-app.git](https://github.com/JoaoZanelato/finance-app.git)
